@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Размышления - Космический Гуманизм 48</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+        }
+        
+        .documents-list {
+            list-style: none;
+        }
+        
+        .document-item {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        
+        .document-item:hover {
+            transform: translateX(10px);
+        }
+        
+        .document-item h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .document-item p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        
+        .document-link {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: background 0.3s ease;
+        }
+        
+        .document-link:hover {
+            background: #764ba2;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 20px;
+            background: #6c757d;
+            color: white;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: background 0.3s ease;
+        }
+        
+        .back-link:hover {
+            background: #545b62;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Размышления</h1>
+        <p class="subtitle">Философские и научные размышления</p>
+        
+        <ul class="documents-list">
+            <li class="document-item">
+                <h2>Манифест</h2>
+                <p>Основные принципы и идеи Космического Гуманизма</p>
+                <a href="manifest.html" class="document-link">Читать →</a>
+            </li>
+            
+            <li class="document-item">
+                <h2>Проект</h2>
+                <p>Описание проекта и его целей</p>
+                <a href="project.html" class="document-link">Читать →</a>
+            </li>
+            
+            <li class="document-item">
+                <h2>Semen Vitae</h2>
+                <p>Философские размышления о жизни и знаниях</p>
+                <a href="semen-vitae.html" class="document-link">Читать →</a>
+            </li>
+            
+            <!-- Сюда можно добавлять новые документы -->
+        </ul>
+        
+        <a href="index.html" class="back-link">← Назад на главную</a>
+    </div>
+</body>
+</html>
