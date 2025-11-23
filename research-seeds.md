@@ -1,8 +1,7 @@
 ---
-layout: page
+layout: default
 title: "Research Seeds"
 permalink: /research-seeds/
-description: "Заготовки для статей, гипотезы и недоделанные мысли. Берите, если интересно."
 ---
 
 # Research Seeds
@@ -21,10 +20,9 @@ description: "Заготовки для статей, гипотезы и нед
 
 ## Список заготовок
 
-<ul>
-  {% for seed in site.research_seeds %}
-    <li>
-      <a href="{{ seed.url }}">{{ seed.title }}</a> — {{ seed.description }}
-    </li>
-  {% endfor %}
-</ul>
+- [Концепция лечения нистагма с помощью ИИ и умных очков](/nystagmus-ai-treatment)
+<!-- Сюда будем добавлять новые заготовки -->
+
+---
+
+*Этот раздел находится в разработке. Возвращайтесь позже для новых идей.*
