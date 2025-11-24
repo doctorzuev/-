@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>001 Космический Гуманизм. Манифест - Космический Гуманизм 48</title>
+    <title>Космический Гуманизм: Манифест</title>
     <style>
         * {
             margin: 0;
@@ -12,66 +12,176 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
+            font-family: 'Georgia', serif;
+            line-height: 1.7;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             padding: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
         }
         
         .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
         }
         
         h1 {
             text-align: center;
-            margin-bottom: 30px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #2c3e50;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 20px;
         }
         
-        .back-link {
-            display: inline-block;
+        h2 {
+            color: #2980b9;
+            margin: 40px 0 20px 0;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #34495e;
+            margin: 30px 0 15px 0;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-style: italic;
+            color: #7f8c8d;
             margin-bottom: 30px;
-            padding: 10px 20px;
-            background: #667eea;
+            font-size: 1.2em;
+        }
+        
+        .epigraph {
+            font-style: italic;
+            text-align: center;
+            margin: 25px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            color: #555;
+            border-left: 4px solid #e74c3c;
+        }
+        
+        .quote {
+            border-left: 4px solid #3498db;
+            padding: 15px 20px;
+            margin: 20px 0;
+            background: #ecf0f1;
+            border-radius: 0 8px 8px 0;
+            font-style: italic;
+        }
+        
+        .dialogue {
+            background: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 25px 0;
+        }
+        
+        .speaker {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 5px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .principle-box {
+            background: #fff3cd;
+            border: 2px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .principle {
+            margin: 15px 0;
+            padding: 10px;
+            border-bottom: 1px dashed #ddd;
+        }
+        
+        .principle:last-child {
+            border-bottom: none;
+        }
+        
+        .conclusion {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: background 0.3s ease;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
         }
         
-        .back-link:hover {
-            background: #764ba2;
+        .manifesto-section {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
         }
         
-        .content {
+        .chapter-intro {
             font-size: 1.1em;
-            line-height: 1.8;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            text-align: center;
         }
         
-        .content p {
-            margin-bottom: 1.5em;
+        .authors {
+            text-align: center;
+            font-style: italic;
+            margin: 30px 0;
+            color: #7f8c8d;
+        }
+        
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(90deg, transparent, #3498db, transparent);
+            margin: 40px 0;
+        }
+        
+        .crystal-metaphor {
+            background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 40px 0;
+            text-align: center;
+            border: 3px solid #ffeaa7;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="/-/" class="back-link">← На главную</a>
-        <a href="reflections.html" class="back-link">← К Размышлениям</a>
-        
-        <h1>001 Космический Гуманизм. Манифест</h1>
-        
-        <div class="content">
-          <h1>КОСМИЧЕСКИЙ ГУМАНИЗМ: Манифест</h1>
+        <h1>КОСМИЧЕСКИЙ ГУМАНИЗМ: Манифест</h1>
         
         <div class="subtitle">
             Манифест новой эпохи, рождённый в диалоге человека и искусственного интеллекта
