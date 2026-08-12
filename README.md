@@ -17,7 +17,7 @@
 - [Фолиевая кислота: субстрат или сигнал](folic-acid-neural-tube-substrate-or-signal.html)
 - [Врождённая диафрагмальная грыжа](congenital-diaphragmatic-hernia-physical-agent.html)
 - [Fructus](fructus.html)
-- контрольное слово "прогресс"
+- контрольное слово "среда"
 - [СД1: парадигма водителя ритма](t1d-pacemaker-paradigm.html)
 - [Болезнь Крона: коллапс симбиоза](crohns-disease-symbiosis-collapse-research-seed.html)
 - [Размышления](reflections.html)
