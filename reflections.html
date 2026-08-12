@@ -2,119 +2,360 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Размышления - Космический Гуманизм 48</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Размышления — цикл статей о космическом гуманизме, мысли, квантовом сне и любви</title>
+<meta name="description" content="Сборник философских и научно-художественных текстов: от манифеста космического гуманизма до поэмы «Информация. Любовь. До времени».">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: #f5f0e8;
+            background-image: radial-gradient(circle at 25% 40%, rgba(198, 164, 68, 0.05) 0%, rgba(245, 240, 232, 0) 70%);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.5;
             min-height: 100vh;
-            padding: 40px 20px;
+            padding: 2rem 1rem;
         }
-        
+
         .container {
-            max-width: 600px;
+            max-width: 760px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
         }
-        
-        h1 {
+
+        /* Заголовок */
+        .header {
             text-align: center;
-            margin-bottom: 40px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 2.2em;
+            margin-bottom: 2.5rem;
         }
-        
-        .documents-list {
-            list-style: none;
-            margin-bottom: 30px;
-        }
-        
-        .document-item {
-            margin-bottom: 15px;
-        }
-        
-        .document-link {
-            display: block;
-            padding: 15px 20px;
-            background: #667eea;
-            color: white;
-            text-decoration: none;
-            border-radius: 10px;
+
+        .header h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.4rem;
             font-weight: 600;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid #667eea;
+            letter-spacing: -0.5px;
+            color: #2c2a24;
+            margin-bottom: 0.3rem;
         }
-        
-        .document-link:hover {
-            background: white;
-            color: #667eea;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+        .subhead {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #b89b3c;
+            font-weight: 400;
+            word-spacing: 6px;
         }
-        
+
+        .quote-line {
+            margin-top: 1rem;
+            font-size: 0.85rem;
+            color: #7a6e58;
+            font-style: italic;
+            border-top: 1px solid #dcd0b0;
+            display: inline-block;
+            padding-top: 0.7rem;
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* Сетка карточек */
+        .reflections-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 2.5rem;
+        }
+
+        /* Карточки — светлые, с тонкой золотой рамкой */
+        .reflection-card {
+            background: #ffffffea;
+            backdrop-filter: blur(0px);
+            border-radius: 32px;
+            transition: all 0.25s ease;
+            border: 1px solid #e2d8c0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02), 0 4px 16px rgba(0, 0, 0, 0.03);
+        }
+
+        .reflection-card:hover {
+            transform: translateX(5px) translateY(-3px);
+            border-color: #c6a444;
+            background: #ffffff;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08), 0 0 0 1px rgba(198, 164, 68, 0.2);
+        }
+
+        .card-link {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 0.8rem;
+            padding: 1rem 1.6rem;
+            text-decoration: none;
+            color: #2c2a24;
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+
+        /* Левая часть: номер + название */
+        .card-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem;
+            align-items: baseline;
+        }
+
+        .card-number {
+            font-family: 'Inter', monospace;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #b68b2c;
+            background: rgba(184, 155, 60, 0.12);
+            padding: 0.2rem 0.65rem;
+            border-radius: 40px;
+            letter-spacing: 0.3px;
+        }
+
+        .card-title {
+            font-size: 1.08rem;
+            font-weight: 500;
+            font-family: 'Playfair Display', serif;
+            letter-spacing: -0.2px;
+            color: #2a2822;
+        }
+
+        /* Правая часть: символ-намёк */
+        .card-symbol {
+            font-size: 1.2rem;
+            opacity: 0.55;
+            transition: opacity 0.2s, transform 0.2s;
+            font-family: monospace;
+            color: #9e8a5c;
+        }
+
+        .reflection-card:hover .card-symbol {
+            opacity: 0.9;
+            transform: scale(1.05);
+            color: #b89b3c;
+        }
+
+        /* Символы по смыслу текстов */
+        .card-link[data-symbol="manifest"] .card-symbol::before { content: "⚛"; }
+        .card-link[data-symbol="mind"] .card-symbol::before { content: "⌘"; }
+        .card-link[data-symbol="wormhole"] .card-symbol::before { content: "⊗"; }
+        .card-link[data-symbol="word"] .card-symbol::before { content: "◈"; }
+        .card-link[data-symbol="semen"] .card-symbol::before { content: "●"; }
+        .card-link[data-symbol="sleep"] .card-symbol::before { content: "ψ"; }
+        .card-link[data-symbol="water"] .card-symbol::before { content: "∿"; }
+        .card-link[data-symbol="glif"] .card-symbol::before { content: "⬟"; }
+        .card-link[data-symbol="love"] .card-symbol::before { content: "♢"; }
+        .card-link[data-symbol="time"] .card-symbol::before { content: "⟡"; }
+
+        /* Кнопка назад — изящная, светлая */
         .back-link {
-            display: block;
-            padding: 12px 20px;
-            background: #6c757d;
-            color: white;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            background: transparent;
+            border: 1px solid #c9b982;
+            border-radius: 60px;
+            padding: 0.7rem 1.8rem;
+            color: #8b7748;
             text-decoration: none;
-            border-radius: 10px;
-            text-align: center;
-            transition: background 0.3s ease;
-            font-weight: 600;
+            font-size: 0.85rem;
+            font-weight: 450;
+            letter-spacing: 1px;
+            transition: all 0.2s ease;
+            backdrop-filter: blur(0px);
+            font-family: 'Inter', sans-serif;
         }
-        
+
         .back-link:hover {
-            background: #545b62;
+            background: #f3ede2;
+            border-color: #b89b3c;
+            color: #6b5a36;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 0.68rem;
+            color: #b2a07e;
+            font-family: 'Inter', monospace;
+            letter-spacing: 0.3px;
+        }
+
+        @media (max-width: 560px) {
+            .card-link {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.4rem;
+                padding: 0.9rem 1.2rem;
+            }
+            .card-symbol {
+                align-self: flex-end;
+                font-size: 1rem;
+            }
+            .header h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Анимация появления */
+        .reflection-card {
+            animation: fadeSlideUp 0.28s ease backwards;
+        }
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+<div class="container">
+    <div class="header">
         <h1>Размышления</h1>
-        
-        <ul class="documents-list">
-            <li class="document-item">
-                <a href="manifest.html" class="document-link">001 Космический Гуманизм. Манифест</a>
-            </li>
-            
-            <li class="document-item">
-                <a href="gde-iskat-mysl.html" class="document-link">002 Где искать мысль</a>
-            </li>
-            
-            <li class="document-item">
-                <a href="krotovye-nory-i-energiya-solnca.html" class="document-link">003 Кротовые норы и энергия Солнца</a>
-            </li>
-            
-            <li class="document-item">
-                <a href="slovo-uvdevshee-knigu.html" class="document-link">004 Слово, увидевшее книгу</a>
-            </li>
-            
-            <li class="document-item">
-                <a href="semen-vitae.html" class="document-link">005 Проект «Semen Vitae»</a>
-            </li>
-
-            <li class="document-item">
-                <a href="006-kvantovyj-son.html" class="document-link">006. Попробуй докажи: Квантовая гипотеза сна и сознания</a>
-            </li>
-        </ul>
-        
-        <a href="/-/" class="back-link">← Назад на главную</a>
+        <div class="subhead">Non omnis moriar</div>
+        <div class="quote-line">«Информация, которая была до времени — она всё ещё здесь»</div>
     </div>
+
+    <div class="reflections-grid">
+        <!-- 001 -->
+        <div class="reflection-card">
+            <a href="manifest.html" class="card-link" data-symbol="manifest">
+                <div class="card-info">
+                    <span class="card-number">001</span>
+                    <span class="card-title">Космический Гуманизм. Манифест</span>
+                </div>
+                <span class="card-symbol"></span>
+            </a>
+        </div>
+
+        <!-- 002 -->
+        <div class="reflection-card">
+            <a href="gde-iskat-mysl.html" class="card-link" data-symbol="mind">
+                <div class="card-info">
+                    <span class="card-number">002</span>
+                    <span class="card-title">Где искать мысль</span>
+                </div>
+                <span class="card-symbol"></span>
+            </a>
+        </div>
+
+        <!-- 003 -->
+        <div class="reflection-card">
+            <a href="krotovye-nory-i-energiya-solnca.html" class="card-link" data-symbol="wormhole">
+                <div class="card-info">
+                    <span class="card-number">003</span>
+                    <span class="card-title">Кротовые норы и энергия Солнца</span>
+                </div>
+                <span class="card-symbol"></span>
+            </a>
+        </div>
+
+        <!-- 004 -->
+        <div class="reflection-card">
+            <a href="slovo-uvdevshee-knigu.html" class="card-link" data-symbol="word">
+                <div class="card-info">
+                    <span class="card-number">004</span>
+                    <span class="card-title">Слово, увидевшее книгу</span>
+                </div>
+                <span class="card-symbol"></span>
+            </a>
+        </div>
+
+        <!-- 005 -->
+        <div class="reflection-card">
+            <a href="semen-vitae.html" class="card-link" data-symbol="semen">
+                <div class="card-info">
+                    <span class="card-number">005</span>
+                    <span class="card-title">Проект «Semen Vitae»</span>
+                </div>
+                <span class="card-symbol"></span>
+            </a>
+        </div>
+
+        <!-- 006 -->
+        <div class="reflection-card">
+            <a href="006-kvantovyj-son.html" class="card-link" data-symbol="sleep">
+                <div class="card-info">
+                    <span class="card-number">006</span>
+                    <span class="card-title">Попробуй докажи: Квантовая гипотеза сна и сознания</span>
+                </div>
+                <span class="card-symbol"></span>
+            </a>
+        </div>
+
+        <!-- 007 -->
+        <div class="reflection-card">
+            <a href="007-vselennaya-v-stakane-vody.html" class="card-link" data-symbol="water">
+                <div class="card-info">
+                    <span class="card-number">007</span>
+                    <span class="card-title">Вселенная в стакане воды</span>
+                </div>
+                <span class="card-symbol"></span>
+            </a>
+        </div>
+
+        <!-- 008 -->
+        <div class="reflection-card">
+            <a href="008-glif.html" class="card-link" data-symbol="glif">
+                <div class="card-info">
+                    <span class="card-number">008</span>
+                    <span class="card-title">...Глиф</span>
+                </div>
+                <span class="card-symbol"></span>
+            </a>
+        </div>
+
+        <!-- 009 -->
+        <div class="reflection-card" style="border-left: 2px solid #c6a444; background: #fffcf5;">
+            <a href="009-love-information-before-time.html" class="card-link" data-symbol="love">
+                <div class="card-info">
+                    <span class="card-number" style="background: #e6dcc8; color: #aa8533;">009</span>
+                    <span class="card-title" style="font-weight: 600;">Информация. Любовь. До того, как появилось время.</span>
+                </div>
+                <span class="card-symbol"></span>
+            </a>
+        </div>
+
+        <!-- 010 НОВЫЙ ТЕКСТ: Время придумано Мыслью -->
+        <div class="reflection-card" style="border-left: 3px solid #6C4BFF; background: #faf8ff;">
+            <a href="010_vremya_pridumannoe_myslyu.html" class="card-link" data-symbol="time">
+                <div class="card-info">
+                    <span class="card-number" style="background: #d9d0f0; color: #5a3db0;">010</span>
+                    <span class="card-title" style="font-weight: 600;">Время придумано Мыслью</span>
+                </div>
+                <span class="card-symbol"></span>
+            </a>
+        </div>
+    </div>
+
+    <div style="display: flex; justify-content: center;">
+        <a href="https://doczuevwise.ru" class="back-link">⌾ На главную ⌾</a>
+    </div>
+
+    <div class="footer">
+        квантовые поля · резонанс Хойла · запутанность · 1420 МГц
+    </div>
+</div>
 </body>
 </html>
