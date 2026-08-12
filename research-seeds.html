@@ -1,65 +1,945 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
-    <title>Research Seeds - Доктор Зуев</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Исследовательские семена (Research Seeds) — открытые гипотезы на стыке медицины и квантовой биологии</title>
+    <meta name="description" content="Сборник исследовательских заготовок: новые парадигмы СД1, болезни Крона, нистагма, квантовая биология мозга и суперорганизмов. Приглашение к коллаборации.">
     <style>
         body { 
-            font-family: Arial, sans-serif; 
-            max-width: 800px; 
+            font-family: 'Georgia', 'Times New Roman', serif; 
+            max-width: 900px; 
             margin: 0 auto; 
-            padding: 20px;
-            line-height: 1.6;
+            padding: 25px;
+            line-height: 1.7;
+            color: #333;
+            background-color: #fefefe;
         }
-        .seed-card {
-            background: #f8f9fa;
-            border-left: 5px solid #007cba;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
+        
+        h1 {
+            color: #2c5c3e;
+            border-bottom: 3px solid #8fbc8f;
+            padding-bottom: 15px;
+            margin-bottom: 25px;
         }
+        
+        h2 {
+            color: #2c5c3e;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #d4a76a;
+        }
+        
+        h3 {
+            color: #2c5c3e;
+            margin: 25px 0 15px;
+        }
+        
+        .intro-section {
+            background-color: #f0f7f0;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 5px solid #2c5c3e;
+        }
+        
         blockquote {
-            border-left: 4px solid #007cba;
-            padding-left: 1em;
-            margin-left: 0;
+            border-left: 4px solid #d4a76a;
+            padding-left: 20px;
+            margin: 25px 0;
             color: #555;
             font-style: italic;
+            font-size: 1.1em;
         }
-        a {
-            color: #007cba;
+        
+        /* ===== КЛЮЧЕВЫЕ ПРОЕКТЫ ===== */
+        .key-projects-section {
+            margin-bottom: 40px;
+        }
+        
+        .key-projects-header {
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #d4a76a;
+            padding-bottom: 12px;
+        }
+        
+        .key-projects-header h2 {
+            margin: 0;
+            padding: 0;
+            border: none;
+            color: #2c5c3e;
+        }
+        
+        .key-projects-subhead {
+            color: #7b3f00;
+            font-style: italic;
+            font-size: 1.1em;
+        }
+        
+        .key-projects-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        
+        .flagship-project {
+            flex: 1 1 400px;
+            padding: 30px;
+            background: linear-gradient(135deg, #fef7ed 0%, #fce9d8 100%);
+            border-radius: 20px;
+            border: 2px solid #d49a5a;
+            box-shadow: 0 12px 28px rgba(212, 154, 90, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .flagship-project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 18px 35px rgba(212, 154, 90, 0.2);
+        }
+        
+        .flagship-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 18px;
+            flex-wrap: wrap;
+        }
+        
+        .flagship-badge {
+            background: linear-gradient(135deg, #d97706, #b85c00);
+            color: white;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-size: 0.9em;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            box-shadow: 0 3px 8px rgba(217, 119, 6, 0.3);
+        }
+        
+        .flagship-badge.crohn {
+            background: linear-gradient(135deg, #2c5c3e, #1a3a26);
+            box-shadow: 0 3px 8px rgba(44, 92, 62, 0.3);
+        }
+
+        .flagship-badge.map-badge {
+            background: linear-gradient(135deg, #1a3a5c, #0d1f33);
+            box-shadow: 0 3px 8px rgba(26, 58, 92, 0.4);
+        }
+        
+        .flagship-type {
+            color: #7b3f00;
+            font-style: italic;
+            font-weight: 500;
+            background: rgba(255,255,255,0.6);
+            padding: 4px 14px;
+            border-radius: 30px;
+            font-size: 0.9em;
+        }
+        
+        .flagship-title {
+            font-size: 1.8em;
+            font-weight: 700;
+            line-height: 1.3;
+            margin: 15px 0 12px;
+            color: #3d2b1a;
+        }
+        
+        .flagship-title a {
+            color: #7b3f00;
             text-decoration: none;
+            border-bottom: 2px dotted #d49a5a;
+            transition: border-color 0.2s, color 0.2s;
         }
+        
+        .flagship-title a:hover {
+            color: #b85c00;
+            border-bottom-color: #b85c00;
+        }
+        
+        .flagship-subtitle {
+            font-size: 1.1em;
+            color: #5e4b36;
+            margin-bottom: 18px;
+            font-weight: 500;
+        }
+        
+        .flagship-description {
+            color: #4a3b2c;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+            line-height: 1.8;
+        }
+        
+        .flagship-meta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            padding: 15px 0;
+            border-top: 1px dashed #d4a373;
+            border-bottom: 1px dashed #d4a373;
+        }
+        
+        .flagship-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #6b4f2c;
+        }
+        
+        .flagship-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 18px 0;
+        }
+        
+        .flagship-tag {
+            background: #f5e6d3;
+            color: #7b3f00;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85em;
+            font-weight: 600;
+            border: 1px solid #e9b47b;
+            letter-spacing: 0.3px;
+        }
+        
+        .flagship-cta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-top: 25px;
+        }
+        
+        .btn-flagship {
+            display: inline-block;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #d97706, #b85c00);
+            color: white;
+            text-decoration: none;
+            border-radius: 40px;
+            font-weight: bold;
+            font-size: 1.05em;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 14px rgba(217, 119, 6, 0.3);
+            border: none;
+        }
+        
+        .btn-flagship.crohn-btn {
+            background: linear-gradient(135deg, #2c5c3e, #1a3a26);
+            box-shadow: 0 6px 14px rgba(44, 92, 62, 0.3);
+        }
+        
+        .btn-flagship.crohn-btn:hover {
+            background: linear-gradient(135deg, #3a7a52, #2a5a3e);
+            box-shadow: 0 10px 20px rgba(44, 92, 62, 0.4);
+        }
+
+        .btn-flagship.map-btn {
+            background: linear-gradient(135deg, #1a3a5c, #0d1f33);
+            box-shadow: 0 6px 14px rgba(26, 58, 92, 0.4);
+        }
+
+        .btn-flagship.map-btn:hover {
+            background: linear-gradient(135deg, #2a4a6c, #1a2f43);
+            box-shadow: 0 10px 20px rgba(26, 58, 92, 0.5);
+        }
+        
+        .btn-flagship:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(217, 119, 6, 0.4);
+            background: linear-gradient(135deg, #e8850a, #c96a0a);
+            color: white;
+        }
+        
+        /* ===== ОСТАЛЬНЫЕ СТИЛИ ===== */
+        .section-card {
+            background: linear-gradient(to bottom, #ffffff, #f9f9f9);
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        
+        .section-icon {
+            font-size: 1.5em;
+            margin-right: 15px;
+            color: #2c5c3e;
+        }
+        
+        .seed-card {
+            background: #f8f9fa;
+            border-left: 4px solid #007cba;
+            padding: 18px;
+            margin: 20px 0;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .seed-card:hover {
+            background: #eef5ff;
+            border-left-color: #2c5c3e;
+        }
+        
+        .seed-card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .seed-card p {
+            margin: 0;
+            color: #555;
+        }
+        
+        a {
+            color: #2c5c3e;
+            text-decoration: none;
+            border-bottom: 1px dotted #8fbc8f;
+            transition: all 0.3s ease;
+        }
+        
         a:hover {
-            text-decoration: underline;
+            color: #d4a76a;
+            border-bottom: 1px solid #d4a76a;
+        }
+        
+        .tag {
+            display: inline-block;
+            background-color: #e8f5e9;
+            color: #2c5c3e;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-right: 8px;
+            margin-top: 8px;
+        }
+        
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #e0e0e0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #2c5c3e;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background-color: #d4a76a;
+            color: #333;
+            transform: translateY(-2px);
+        }
+        
+        .coming-soon {
+            text-align: center;
+            padding: 30px;
+            color: #666;
+            font-style: italic;
+            border: 2px dashed #ddd;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .section-description {
+            color: #555;
+            margin-bottom: 20px;
+            font-size: 1.05em;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            .flagship-title {
+                font-size: 1.6em;
+            }
+            
+            .section-card {
+                padding: 15px;
+            }
+            
+            .nav-links {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .btn {
+                text-align: center;
+                width: 100%;
+            }
+            
+            .flagship-cta {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .btn-flagship {
+                text-align: center;
+            }
+            
+            .key-projects-grid {
+                flex-direction: column;
+            }
+        }
+        
+        .counter {
+            color: #8fbc8f;
+            font-weight: bold;
+            text-align: center;
+            margin: 30px 0;
+            padding: 15px;
+            background-color: #f0f7f0;
+            border-radius: 10px;
+            border: 1px solid #d0e6d0;
         }
     </style>
 </head>
 <body>
     <h1>Research Seeds</h1>
     
-    <p>Здесь я собираю идеи и заготовки для статей, которые рождаются в процессе размышлений и диалогов с ИИ. Это не готовые работы, а скорее семена (seeds), которые могут прорасти в чьих-то руках.</p>
-
-    <blockquote>«Я хотел помочь людям!» — Гефест</blockquote>
-
-    <h2>Почему это здесь?</h2>
-    <p>Я часто размышляю на темы, далекие от моей основной профессии (детская хирургия). Мы с ИИ так досконально разбираем эти темы, что практически создаем обзорную статью или придумываем метод лечения. У меня нет времени доводить это до ума, но кто-то другой, возможно, сможет.</p>
-
-    <p><strong>Берите, используйте, развивайте. Безвозмездно.</strong></p>
-
-    <hr>
-
-    <h2>Список заготовок</h2>
-
-    <div class="seed-card">
-        <h3><a href="nystagmus-ai-treatment.html">Концепция лечения нистагма с помощью ИИ и умных очков</a></h3>
-        <p>Концепция умных очков с искусственным интеллектом для проактивного подавления врожденного нистагма через электростимуляцию глазодвигательных мышц.</p>
+    <div class="intro-section">
+        <p><strong>Открытые исследовательские заготовки</strong> — это концепции, идеи и наброски статей, которые рождаются в процессе размышлений и диалогов с ИИ. Это не готовые работы, а скорее семена (seeds), которые могут прорасти в исследованиях, статьях или технологиях.</p>
+        
+        <blockquote>«Самое прекрасное, что мы можем испытать, — это ощущение тайны. Она есть источник всякого подлинного искусства и науки.» — Альберт Эйнштейн</blockquote>
+        
+        <p><strong>Статус:</strong> Все материалы публикуются под лицензией <strong>CC BY-NC-SA 4.0</strong> — свободное использование, копирование и развитие с указанием авторства.</p>
+        <p><strong>Миссия:</strong> Поделиться междисциплинарными идеями, которые могут быть интересны исследователям в разных областях науки.</p>
     </div>
 
-    <!-- Сюда будем добавлять новые заготовки -->
+    <!-- ================================================ -->
+    <!-- КЛЮЧЕВЫЕ ПРОЕКТЫ — МЕДИЦИНСКИЕ ПАРАДИГМЫ -->
+    <!-- ================================================ -->
+    <div class="key-projects-section">
+        <div class="key-projects-header">
+            <h2>🧬 КЛЮЧЕВЫЕ ПРОЕКТЫ — МЕДИЦИНСКИЕ ПАРАДИГМЫ</h2>
+            <span class="key-projects-subhead">разгадывая головоломки болезней</span>
+        </div>
+        
+        <div class="key-projects-grid">
+            <!-- Проект 1: Сахарный диабет 1 типа -->
+            <div class="flagship-project">
+                <div class="flagship-header">
+                    <span class="flagship-badge">🥼 СД1</span>
+                    <span class="flagship-type">полная монография · 8 частей</span>
+                </div>
+                
+                <div class="flagship-title">
+                    <a href="t1d-pacemaker-paradigm.html">
+                        Сахарный диабет 1 типа как распад нейроэндокринной пейсмейкерной системы
+                    </a>
+                </div>
+                
+                <div class="flagship-subtitle">
+                    Новая парадигма патогенеза, неудач трансплантации и возможностей профилактики
+                </div>
+                
+                <div class="flagship-description">
+                    Почему трансплантированные β-клетки не работают? Почему у близнецов с одинаковыми генами диабет развивается лишь в 30–50% случаев? β-клетка — не просто «фабрика инсулина», а узел нейроэндокринной сети, управляемой гипоталамусом и вагусом.
+                </div>
+                
+                <div class="flagship-meta">
+                    <div class="flagship-meta-item">
+                        <span>📖</span> 8 частей · ~45 мин
+                    </div>
+                    <div class="flagship-meta-item">
+                        <span>📚</span> 130+ источников
+                    </div>
+                </div>
+                
+                <div class="flagship-tags">
+                    <span class="flagship-tag">сахарный диабет 1 типа</span>
+                    <span class="flagship-tag">нейроэндокринная система</span>
+                    <span class="flagship-tag">вагус</span>
+                    <span class="flagship-tag">β-клетки-хабы</span>
+                    <span class="flagship-tag">бутират</span>
+                    <span class="flagship-tag">профилактика</span>
+                </div>
+                
+                <div class="flagship-cta">
+                    <a href="t1d-pacemaker-paradigm.html" class="btn-flagship">🍎 Читать монографию</a>
+                </div>
+            </div>
+            
+            <!-- Проект 2: Болезнь Крона -->
+            <div class="flagship-project">
+                <div class="flagship-header">
+                    <span class="flagship-badge crohn">🔬 БОЛЕЗНЬ КРОНА</span>
+                    <span class="flagship-type">исследовательское семя · 6 частей</span>
+                </div>
+                
+                <div class="flagship-title">
+                    <a href="crohns-disease-symbiosis-collapse-research-seed.html">
+                        Болезнь Крона: от воспаления к коллапсу симбиоза
+                    </a>
+                </div>
+                
+                <div class="flagship-subtitle">
+                    Новая парадигма — фаги, TTV и утраченные тренировочные инфекции
+                </div>
+                
+                <div class="flagship-description">
+                    Почему болезнь поражает именно терминальный отдел подвздошной кишки? Почему курение утяжеляет течение, а при язвенном колите — защищает? Почему мутации NOD2 — лишь фактор риска? Гипотеза: БК — это коллапс мультидоменного симбиоза между макроорганизмом, микробиотой, бактериофагами и вирусом TTV на фоне утраты эволюционных «тренировочных» инфекций (гельминты, H. pylori, Bartonella).
+                </div>
+                
+                <div class="flagship-meta">
+                    <div class="flagship-meta-item">
+                        <span>📖</span> 6 частей · ~50 мин
+                    </div>
+                    <div class="flagship-meta-item">
+                        <span>📚</span> 131 источник
+                    </div>
+                </div>
+                
+                <div class="flagship-tags">
+                    <span class="flagship-tag">болезнь Крона</span>
+                    <span class="flagship-tag">бактериофаги</span>
+                    <span class="flagship-tag">TTV</span>
+                    <span class="flagship-tag">микробиом</span>
+                    <span class="flagship-tag">H. pylori</span>
+                    <span class="flagship-tag">гельминты</span>
+                    <span class="flagship-tag">фиброз</span>
+                    <span class="flagship-tag">склеродермия</span>
+                </div>
+                
+                <div class="flagship-cta">
+                    <a href="crohns-disease-symbiosis-collapse-research-seed.html" class="btn-flagship crohn-btn">🦠 Читать исследование</a>
+                </div>
+            </div>
 
-    <hr>
-    <p><em>Этот раздел находится в разработке. Возвращайтесь позже для новых идей.</em></p>
+            <!-- Проект 3: Ковёр и МАП -->
+            <div class="flagship-project">
+                <div class="flagship-header">
+                    <span class="flagship-badge map-badge">🧬 МАП</span>
+                    <span class="flagship-type">концептуальная статья · Research Seed</span>
+                </div>
+                
+                <div class="flagship-title">
+                    <a href="carpet-and-map.html">
+                        «Ковёр» и Мультимодальный Анатомический Паспорт (МАП)
+                    </a>
+                </div>
+                
+                <div class="flagship-subtitle">
+                    Унифицированная платформа для пространственно-разрешённой мульти-омиксной интеграции поверхности тела и внутренней анатомии человека
+                </div>
+                
+                <div class="flagship-description">
+                    Данные о внутренней анатомии (КТ, МРТ) и данные о поверхностной экосистеме тела (микробиом, метаболом) существуют в разобщённых системах координат. Предложена технология «Ковёр» — полное неинвазивное картографирование поверхности тела вакуумным коконом с функционализированными слоями — и МАП, итоговая 5D-модель пациента. Статья включает полное Техническое задание на экспериментальный образец установки «Прялка».
+                </div>
+                
+                <div class="flagship-meta">
+                    <div class="flagship-meta-item">
+                        <span>📖</span> 6 разделов · ~35 мин
+                    </div>
+                    <div class="flagship-meta-item">
+                        <span>📚</span> 25 источников
+                    </div>
+                    <div class="flagship-meta-item">
+                        <span>📋</span> + ТЗ «Прялка»
+                    </div>
+                </div>
+                
+                <div class="flagship-tags">
+                    <span class="flagship-tag">мульти-омикс</span>
+                    <span class="flagship-tag">микробиом кожи</span>
+                    <span class="flagship-tag">КТ/МРТ</span>
+                    <span class="flagship-tag">5D-модель</span>
+                    <span class="flagship-tag">персонализированная медицина</span>
+                    <span class="flagship-tag">вакуумное картирование</span>
+                    <span class="flagship-tag">цифровой двойник</span>
+                </div>
+                
+                <div class="flagship-cta">
+                    <a href="carpet-and-map.html" class="btn-flagship map-btn">🧬 Читать статью</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- Инженерия биоценозов и системная профилактика -->
+    <!-- ================================================ -->
+    <div class="key-projects-section">
+        <div class="key-projects-header">
+            <h2>🦷 Инженерия биоценозов и системная профилактика</h2>
+            <span class="key-projects-subhead">управление микробиомом вместо войны с ним</span>
+        </div>
+
+        <div class="key-projects-grid">
+            <!-- Проект: Протокол «Тишина» -->
+            <div class="flagship-project">
+                <div class="flagship-header">
+                    <span class="flagship-badge crohn">🦷 ТИШИНА</span>
+                    <span class="flagship-type">системная инженерия · 4 тома</span>
+                </div>
+
+                <div class="flagship-title">
+                    <a href="tishina.html">
+                        Протокол «Тишина»
+                    </a>
+                </div>
+
+                <div class="flagship-subtitle">
+                    Эшелонированная система управления оральным биоценозом: от ингибирования гликозилтрансфераз до конкурентного бактериального заселения
+                </div>
+
+                <div class="flagship-description">
+                    Кариес и пародонтит остаются самыми распространёнными заболеваниями человечества, несмотря на столетие механической гигиены. Протокол «Тишина» меняет парадигму: враг — не бактерия, а архитектура биоплёнки. Пять эшелонов защиты — от серебряного стента в слюнном протоке до фотодинамической капы с куркумином и пробиотического заселения — работают как система проактивного управления биоценозом. Четыре тома: научное обоснование, технические задания на устройства, клинические протоколы ведения и педиатрическая адаптация «Первая Тишина».
+                </div>
+
+                <div class="flagship-meta">
+                    <div class="flagship-meta-item">
+                        <span>📖</span> 4 тома · ~90 мин
+                    </div>
+                    <div class="flagship-meta-item">
+                        <span>📚</span> 66 источников
+                    </div>
+                    <div class="flagship-meta-item">
+                        <span>📋</span> 7 ТЗ
+                    </div>
+                </div>
+
+                <div class="flagship-tags">
+                    <span class="flagship-tag">оральный биоценоз</span>
+                    <span class="flagship-tag">биоплёнка</span>
+                    <span class="flagship-tag">кариес</span>
+                    <span class="flagship-tag">пародонтит</span>
+                    <span class="flagship-tag">куркумин</span>
+                    <span class="flagship-tag">фотодинамическая терапия</span>
+                    <span class="flagship-tag">пробиотики</span>
+                    <span class="flagship-tag">серебряный стент</span>
+                    <span class="flagship-tag">педиатрия</span>
+                </div>
+
+                <div class="flagship-cta">
+                    <a href="tishina.html" class="btn-flagship crohn-btn">🦷 Читать протокол</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- Эпистемологический парадокс: интервенция без теории -->
+    <!-- ================================================ -->
+    <div class="section-card">
+        <div class="section-header">
+            <div class="section-icon">🔍</div>
+            <div>
+                <h2>Эпистемологический парадокс: интервенция без теории</h2>
+                <div class="section-description">Ситуации, когда мы знаем, что интервенция работает, но не знаем — почему. Загадки биохимии и медицины, где практика опережает понимание механизма. Это заставляет начать думать.</div>
+            </div>
+        </div>
+        
+        <div class="seed-card">
+            <h3><a href="folic-acid-neural-tube-substrate-or-signal.html">Фолиевая кислота и закрытие нервной трубки: субстрат или сигнал? К постановке вопроса о физическом механизме профилактики дефектов нейруляции</a></h3>
+            <p>Фолиевая кислота предотвращает дефекты нервной трубки (spina bifida, анэнцефалию) — это доказано 30 лет назад и спасло миллионы жизней. Но молекулярный механизм до сих пор не понят. Стандартная биохимическая модель (субстрат для синтеза нуклеотидов) оставляет аномалии: специфичность дефекта, пороговая доза (200 мкг не работают, 400 работают), эффективность синтетической формы, эффект при нормальном фолатном статусе. Предложена альтернативная гипотеза: в высоких концентрациях фолиевая кислота действует как физический агент (изменение поверхностного натяжения, π-π-стэкинг, кооперативные эффекты). Работа содержит проверяемые предсказания и экспериментальные протоколы. Это не просто статья — это приглашение пересмотреть саму логику биомедицинского познания.</p>
+            <div>
+                <span class="tag">эпистемология</span>
+                <span class="tag">биохимия</span>
+                <span class="tag">нейробиология развития</span>
+                <span class="tag">фолиевая кислота</span>
+                <span class="tag">физический агент</span>
+                <span class="tag">дефекты нервной трубки</span>
+                <span class="tag">интервенция без теории</span>
+            </div>
+        </div>
+        
+        <div class="seed-card">
+            <h3><a href="congenital-diaphragmatic-hernia-physical-agent.html">Врождённая диафрагмальная грыжа: в поисках физического агента смыкания. От загадки четырёх зачатков — к проверяемой гипотезе через Saireito, нитрофен и кандидатов-мимиков</a></h3>
+            <p>Прямое продолжение гипотезы о физических агентах в эмбриогенезе. Если закрытие нервной трубки управляется градиентом амфифильной молекулы (птеридина), то почему диафрагма должна быть исключением? Экспериментальное доказательство: Saireito (японская травяная смесь) предотвращает ВДГ на модели нитрофена у крыс. Теоретическая фильтрация компонентов выделяет двух кандидатов — байкалин (флавоноид, MW 446) и глицирризиновую кислоту (сапонин, MW 822). Объяснение левосторонней асимметрии (80–85% случаев) через истощение градиента агента во времени. Семь проверяемых предсказаний, включая тестирование на генетической модели Fog2–/–. Дорожная карта от фракционирования Saireito до анализа амниотической жидкости у людей.</p>
+            <div>
+                <span class="tag">эпистемология</span>
+                <span class="tag">эмбриология</span>
+                <span class="tag">врождённая диафрагмальная грыжа</span>
+                <span class="tag">Saireito</span>
+                <span class="tag">байкалин</span>
+                <span class="tag">глицирризиновая кислота</span>
+                <span class="tag">физический агент</span>
+                <span class="tag">асимметрия</span>
+                <span class="tag">интервенция без теории</span>
+            </div>
+        </div>
+        
+        <div class="coming-soon">
+            <p>В разработке: другие загадки биохимии — аспирин, парацетамол, антидепрессанты. Что ещё мы используем, не понимая как?</p>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- Нейрофизиология и медицинские технологии -->
+    <!-- ================================================ -->
+    <div class="section-card">
+        <div class="section-header">
+            <div class="section-icon">🧠</div>
+            <div>
+                <h2>Нейрофизиология и медицинские технологии</h2>
+                <div class="section-description">Концепции и гипотезы на стыке нейронаук, медицины и технологий, направленные на решение конкретных клинических проблем.</div>
+            </div>
+        </div>
+        
+        <div class="seed-card">
+            <h3><a href="nystagmus-ai-treatment.html">Концепция лечения нистагма с помощью ИИ и умных очков</a></h3>
+            <p>Концепция умных очков с искусственным интеллектом для проактивного подавления врожденного нистагма через электростимуляцию глазодвигательных мышц.</p>
+            <div>
+                <span class="tag">нейрофизиология</span>
+                <span class="tag">биомедицинские технологии</span>
+                <span class="tag">ИИ в медицине</span>
+            </div>
+        </div>
+        
+        <div class="seed-card">
+            <h3><a href="systemic-homeostasis.html">Проект «Системный Гомеостаз»: от клеточных ритмов к карте синхронизации организма</a></h3>
+            <p>Исследовательская программа, проверяющая гипотезу о том, что восстановительный сон требует синхронизации низкочастотных ритмов не только в мозге, но и во всей периферической мускулатуре. Дорожная карта от моделей in vitro к созданию терапевтического прототипа.</p>
+            <div>
+                <span class="tag">нейрофизиология</span>
+                <span class="tag">медицинские технологии</span>
+                <span class="tag">системная биология</span>
+                <span class="tag">ИИ в медицине</span>
+                <span class="tag">биофизика</span>
+            </div>
+        </div>
+        
+        <div class="coming-soon">
+            <p>В разработке: новые концепции в области нейротехнологий и медицинской инженерии</p>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- Квантовая биология мозга -->
+    <!-- ================================================ -->
+    <div class="section-card">
+        <div class="section-header">
+            <div class="section-icon">⚛️</div>
+            <div>
+                <h2>Квантовая биология мозга</h2>
+                <div class="section-description">Исследовательские гипотезы о возможной роли квантовых эффектов в работе мозга, нейродегенеративных процессах и высших когнитивных функциях.</div>
+            </div>
+        </div>
+        
+        <div class="seed-card">
+            <h3><a href="neurocognitive-paradox-cytoskeleton-research-seed.html">Нейрокогнитивный парадокс наследственных заболеваний цитоскелета</a></h3>
+            <p>Клинический обзор и программа исследований на стыке клеточной биологии, нейронаук и биофизики. Анализ парадокса: почему мутации в универсальных генах цитоскелета приводят к избирательному поражению высших функций мозга.</p>
+            <div>
+                <span class="tag">квантовая биология</span>
+                <span class="tag">нейронауки</span>
+                <span class="tag">цитоскелет</span>
+                <span class="tag">когнитивные нарушения</span>
+            </div>
+        </div>
+        
+        <div class="seed-card">
+            <h3><a href="neurocognitive-paradox-fe-s-clusters-research-seed.html">Нейрокогнитивный парадокс наследственных нарушений биогенеза железо-серных кластеров</a></h3>
+            <p>Клинический обзор и программа исследований на стыке биохимии, нейробиологии и квантовой биологии. Анализ парадокса избирательных нейропсихиатрических нарушений при болезнях Fe-S кластеров и гипотеза о квантовой клеточной координации.</p>
+            <div>
+                <span class="tag">квантовая биология</span>
+                <span class="tag">метаболизм</span>
+                <span class="tag">железо-серные кластеры</span>
+                <span class="tag">нейропсихиатрия</span>
+            </div>
+        </div>
+        
+        <div class="coming-soon">
+            <p>В разработке: гипотезы о квантовой природе памяти, сознания и нейронной координации</p>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- Квантовая биология суперорганизмов -->
+    <!-- ================================================ -->
+    <div class="section-card">
+        <div class="section-header">
+            <div class="section-icon">🐜</div>
+            <div>
+                <h2>Квантовая биология суперорганизмов</h2>
+                <div class="section-description">Исследовательские вопросы о коллективном интеллекте, координации в биологических системах и возможных квантовых механизмах коммуникации на надорганизменном уровне.</div>
+            </div>
+        </div>
+        
+        <div class="seed-card">
+            <h3><a href="syncytium-superorganism.html">Синцитий суперорганизма: почему колония реагирует быстрее, чем её части. Какова природа биологической коммуникации</a></h3>
+            <p>Прямое продолжение исследования о муравьях-листорезах. Если первая работа («Симбиоз как инженерный разум») систематизировала парадоксы стигмергии, то эта статья предлагает конкретный физический механизм быстрой координации. Гипотеза функционального синцития: колония работает как возбудимая среда, где автоволны распространяются через субстрат гнезда и тела особей. Сформулированы четыре проверяемых предсказания и экспериментальные протоколы. В обсуждении затронуты вопросы масштабирования принципа на биосферу, вычислительного субстрата живых систем и возможной роли квантовой когерентности в суперорганизмах.</p>
+            <div>
+                <span class="tag">суперорганизм</span>
+                <span class="tag">синцитий</span>
+                <span class="tag">автоволны</span>
+                <span class="tag">возбудимые среды</span>
+                <span class="tag">коллективный интеллект</span>
+                <span class="tag">муравьи-листорезы</span>
+                <span class="tag">квантовая биология</span>
+                <span class="tag">глубинная биосфера</span>
+            </div>
+        </div>
+        
+        <div class="seed-card">
+            <h3><a href="symbiosis-as-engineering-mind.html">Симбиоз как инженерный разум: нерешённые вопросы координации в колонии муравьёв-листорезов</a></h3>
+            <p>Анализ границ теории стигмергии и формулировка исследовательских парадоксов в координации суперорганизмов. Предложение о рассмотрении муравейника как органа суперорганизма и гипотезы о возможных квантовых аспектах коллективной коммуникации.</p>
+            <div>
+                <span class="tag">коллективный интеллект</span>
+                <span class="tag">суперорганизмы</span>
+                <span class="tag">биокоммуникация</span>
+                <span class="tag">квантовая биология</span>
+                <span class="tag">самоорганизация</span>
+            </div>
+        </div>
+        
+        <div class="coming-soon">
+            <p>В разработке: гипотезы о квантовой координации в стаях, роях и экосистемах</p>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- Фундаментальная квантовая биология -->
+    <!-- ================================================ -->
+    <div class="section-card">
+        <div class="section-header">
+            <div class="section-icon">🔬</div>
+            <div>
+                <h2>Фундаментальная квантовая биология</h2>
+                <div class="section-description">Общие принципы, методологии и междисциплинарные подходы к изучению квантовых эффектов в живых системах.</div>
+            </div>
+        </div>
+        
+        <div class="seed-card">
+            <h3><a href="mycelium-code-roadmap-hybrid-bio-computational-interface.html">Проект «Mycelium Code» — Дорожная карта создания гибридного биовычислительного интерфейса</a></h3>
+            <p>Детальная дорожная карта проекта по созданию гибридного биовычислительного интерфейса на основе сетевой динамики кардиомиоцитов. Концепция использования живых клеточных сетей в качестве энергоэффективных вычислительных субстратов с описанием архитектуры, протоколов и критериев верификации.</p>
+            <div>
+                <span class="tag">биовычисления</span>
+                <span class="tag">кардиомиоциты</span>
+                <span class="tag">гибридный интерфейс</span>
+                <span class="tag">MEA</span>
+                <span class="tag">квантовая биология</span>
+                <span class="tag">вычислительная биология</span>
+            </div>
+        </div>
+        
+        <div class="coming-soon">
+            <p>В разработке: обзорные материалы и методологические основы квантовой биологии</p>
+            <p>Планируются статьи о: квантовой когерентности в биомолекулах, туннелировании в ферментативных реакциях, макроскопических квантовых эффектах в живых системах</p>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- Синтетическая иммунология и инженерия латентных инфекций -->
+    <!-- ================================================ -->
+    <div class="section-card">
+        <div class="section-header">
+            <div class="section-icon">🧬</div>
+            <div>
+                <h2>Синтетическая иммунология и инженерия латентных инфекций</h2>
+                <div class="section-description">Концепции эрадикации персистирующих вирусов с использованием синтетических генетических конструкций и мРНК-вакцин.</div>
+            </div>
+        </div>
+        
+        <div class="seed-card">
+            <h3><a href="morok-latent-virus-eradication.html">Проект «Морок»: элиминация латентного VZV с помощью miRNA-сенсоров и иммунного прайминга</a></h3>
+            <p>Концепция двухкомпонентной системы для точечного уничтожения нейронов, содержащих латентный вирус ветряной оспы. Использование вирусных микроРНК как эндогенного триггера для активации синтетического иммуногенного белка, доставляемого AAV, с последующей элиминацией меченых клеток CD8+ Т-клетками, индуцированными мРНК-вакцинацией. Дорожная карта экспериментальной валидации.</p>
+            <div>
+                <span class="tag">синтетическая биология</span>
+                <span class="tag">иммунология</span>
+                <span class="tag">вирусология</span>
+                <span class="tag">AAV</span>
+                <span class="tag">мРНК-вакцины</span>
+                <span class="tag">латентные инфекции</span>
+                <span class="tag">микроРНК</span>
+            </div>
+        </div>
+        
+        <div class="coming-soon">
+            <p>В разработке: применение платформы для HSV, ВИЧ, HBV</p>
+        </div>
+    </div>
+
+    <!-- ================================================ -->
+    <!-- Городская инфраструктура и логистика -->
+    <!-- ================================================ -->
+    <div class="section-card">
+        <div class="section-header">
+            <div class="section-icon">🏙️</div>
+            <div>
+                <h2>Городская инфраструктура и логистика</h2>
+                <div class="section-description">Инженерные концепции и системные решения для городского хозяйства, логистики и коммунальной автоматизации. Проекты, которые пересматривают организацию процессов, а не только технику.</div>
+            </div>
+        </div>
+        
+        <div class="seed-card">
+            <h3><a href="scarab-pyramid-urban-cleaning-system.html">Концепция «Скарабей и Пирамида» — Система непрерывной уборки городских улиц</a></h3>
+            <p>Полная автономная уборочная система, работающая круглосуточно: рой роботов-«Скарабеев», машины снабжения «Мулы» и центральная база «Пирамида». Замкнутый цикл сменных баков, вытеснение грязи топливом, шахматная логистика. Не новая машина, а новая система.</p>
+            <div>
+                <span class="tag">городская инфраструктура</span>
+                <span class="tag">логистика роевых систем</span>
+                <span class="tag">автономные роботы</span>
+                <span class="tag">замкнутый цикл</span>
+                <span class="tag">УВД-мойка</span>
+                <span class="tag">системная инженерия</span>
+            </div>
+        </div>
+        
+        <div class="coming-soon">
+            <p>В разработке: новые концепции в области городской логистики, коммунальных роев и инфраструктурной автоматизации</p>
+        </div>
+    </div>
+
+    <div class="counter">
+        <p>Всего исследовательских заготовок: <strong>14</strong> | Разделов: <strong>9</strong></p>
+        <p style="font-size: 0.9em; margin-top: 8px;">🧬 ключевые проекты — медицинские парадигмы · 🦷 инженерия биоценозов · эпистемологический парадокс — заставляет начать думать</p>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html" class="btn">← Назад на главную</a>
+        <a href="#top" class="btn">Наверх ↑</a>
+    </div>
     
-    <p><a href="index.html">← Назад на главную</a></p>
+    <footer style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e0e0e0; color: #666; font-size: 0.9em;">
+        <p>© 2026 Зуев М.Е. При участии ИИ-аналитика. Все материалы — открытые исследовательские заготовки.</p>
+        <p>Лицензия: <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a></p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                if (this.getAttribute('href') === '#top') {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }
+            });
+        });
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const footer = document.querySelector('footer p');
+            if (footer) {
+                const currentYear = new Date().getFullYear();
+                footer.innerHTML = footer.innerHTML.replace('2025', currentYear);
+            }
+        });
+    </script>
 </body>
 </html>
